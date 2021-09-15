@@ -1,0 +1,19 @@
+#
+# Picobot:
+# I decided to go with a fairly simple (but I think effective)
+# algorithm, almost hitting the 6 lines! Couldn't get rude
+# of the last one sadly enough :(
+#
+
+# First go to the ceiling and to the corner
+0 xx** -> E 0
+0 xE** -> N 0
+0 NEx* -> W 2
+
+# Go east until hitting a wall
+1 *x** -> E 1
+1 *E** -> S 2
+
+# Go west until hitting a wall
+2 **x* -> W 2
+2 **W* -> S 1
