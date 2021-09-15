@@ -1,0 +1,32 @@
+#
+# Pico Bot II
+# Managed to hit the 8 lines this time
+#
+
+0 x*** -> N 1
+0 N*** -> x 2
+1 *x** -> E 3
+1 *E** -> x 0
+2 **x* -> W 0
+2 **W* -> x 3
+3 ***x -> S 2
+3 ***S -> x 1
+
+# My first attempt
+# Just leaving it here for now
+# It does seem to run a bit faster.
+# 0 xE** -> N 0
+# 0 *x** -> E 1
+# 0 NE** -> x 3
+
+# 1 *x*S -> E 1
+# 1 ***x -> S 2
+# 1 *E*S -> x 0
+
+# 2 **Wx -> S 2
+# 2 **x* -> W 3
+# 2 **WS -> x 0
+
+# 3 N*x* -> W 3
+# 3 x*** -> N 0
+# 3 N*W* -> x 2
