@@ -1,0 +1,21 @@
+#
+# Pico Bot III
+#
+
+0 ***x -> S 0
+0 *ExS -> W 0
+0 *xWS -> E 0
+0 *EWS -> N 1
+
+1 xxxx -> W 2
+2 *x** -> E 2
+2 xE** -> N 3
+2 NE** -> W 5
+
+3 xxxx -> E 4
+4 **x* -> W 4
+4 x*W* -> N 1
+4 N*W* -> E 6
+
+5 xxxx -> N 4
+6 xxxx -> N 2
