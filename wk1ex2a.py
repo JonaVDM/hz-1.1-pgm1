@@ -28,11 +28,14 @@ def rps():
         again = input('Nog een keer spelen? [Yn] ')
         if again not in ['y', 'Y', '']:
             break
+    print('Was leuk gespeeld te hebben 👋')
 
 
+# Splitting of the repeating part of the function to make it look nicer
 def _run(options):
     random.seed()
 
+    # Get the options from the list with wapons
     user = input(f'Kies je wapen {", ".join(options.keys())}: ')
     comp = random.choice(list(options.keys()))
 
