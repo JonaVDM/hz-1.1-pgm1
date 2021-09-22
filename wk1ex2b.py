@@ -132,7 +132,7 @@ def _leaveTable(name):
 def _door(name, delay):
     print("""
 
-    Je doet de deur langzaam open en loopt naar binn_goThroughDooren, maar wanneer je
+    Je doet de deur langzaam open en loopt naar binnen, maar wanneer je
     binnenkomt is er… niets! Geen wijze dames en heren, geen dozen en zover je
     kan zien ook geen kruimels van de taart. Je denkt bij jezelf dat je beter
     terug kan naar de trap, maar zodra je begint te lopen naar de deur slaat
