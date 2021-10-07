@@ -5,7 +5,7 @@
 
 def mult(n, m):
     """
-    Multiply two numbers using recursing
+    Multiply two numbers using recursion
 
     :param n: The first number
     :type n: int
@@ -249,7 +249,7 @@ def move_non_vowel(s):
     move the first letter to the end as long as it isn't a vowel
 
     :param s: string to conver
-    :type s: string 
+    :type s: string
 
     :rtype: string
     """
