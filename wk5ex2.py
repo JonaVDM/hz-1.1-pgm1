@@ -94,8 +94,11 @@ assert add_b("110101010", "11111111") == "1010101001"
 assert add_b("1", "1") == "10"
 
 
-def get_pairs(s: str, c: int = 1) -> list[tuple[str, int]]:
+def get_pairs(s: str, c: int = 1) -> list:
     """ Get a list of all the pairs in a string
+
+        Returns a list of tuples containing the letter
+        with the amount of times it's repeated
     """
     if len(s) == 1:
         return [(s, c)]
