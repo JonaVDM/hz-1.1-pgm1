@@ -72,32 +72,19 @@ assert add("10101", "10101") == '101010'
 def add_b(s: str, t: str) -> str:
     """ Add two binary numbers together!
     """
-
-    if s == '':
+    if len(s) == 0:
         return t
+    elif len(t) == 0:
+        return s
 
-    # And in my defense: yes I am aware that one of the
-    # main ideas of functional programming is that you
-    # do not "mutate" an object. But you guys straight
-    # up threw this recursion thing down our throat
-    # without explaining why we are using functional
-    # programming in the first place or what it really
-    # means to use it...
-
-    a, b = int(s[-1]), int(t[-1])
-    s, t = s[:-1], t[:-1]
-    x = a + b
-
-    if t == '':
-        t = '0'
-
-    if x > 1:
-        x -= 2
-        l = list(t)
-        l[-1] = str(int(t[-1]) + 1)
-        t = ''.join(l)
-
-    return add_b(s, t) + str(x)
+    if s[-1] == "0" and t[-1] == "0":
+        return add_b(s[:-1], t[:-1]) + "0"
+    elif s[-1] == "0" and t[-1] == "1":
+        return add_b(s[:-1], t[:-1]) + "1"
+    elif s[-1] == "1" and t[-1] == "0":
+        return add_b(s[:-1], t[:-1]) + "1"
+    carry = add_b("1", s[:-1])
+    return add_b(carry, t[:-1]) + "0"
 
 
 assert add_b("11", "100") == "111"
@@ -152,3 +139,4 @@ def uncompress(b: str) -> str:
 assert uncompress("10000101") == '11111'
 assert uncompress(
     "00010000100100000001000010010000") == '0000000000000000111111111111111100000000000000001111111111111111'
+assert uncompress('01000000') == 64 * '0'
