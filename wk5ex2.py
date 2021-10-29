@@ -59,6 +59,10 @@ assert base_to_base(2, 5, "1001001010") == '4321'
 
 
 def add(s, t):
+    """ Add two binary numbers together
+        but not using binary numbers to
+        add them together...
+    """
     return num_to_base_b(base_b_to_num(s, 2) + base_b_to_num(t, 2), 2)
 
 
